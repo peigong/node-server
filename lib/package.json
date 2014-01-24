@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "nopt": "~2.1.2",
     "express": "~3.4.8",
     "lodash": "~1.2.1"
   }

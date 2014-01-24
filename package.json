@@ -1,0 +1,14 @@
+{
+  "name": "node-server",
+  "version": "0.1.0",
+  "homepage": "https://github.com/toolkit-rack/node-server",
+  "authors": [
+    "周培公 <peigong@foxmail.com>"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-contrib-copy": "~0.4.0"
+  }
+}

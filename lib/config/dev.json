@@ -1,0 +1,7 @@
+{
+    "app": {
+        "http_port": "4444",
+        "access_log": "./log/access_log.log",
+        "error_log": "./log/error_log.log"
+    }
+}
