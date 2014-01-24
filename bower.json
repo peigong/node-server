@@ -1,0 +1,16 @@
+{
+  "name": "node-server",
+  "version": "0.1.0",
+  "homepage": "https://github.com/toolkit-rack/node-server",
+  "authors": [
+    "周培公 <peigong@foxmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
