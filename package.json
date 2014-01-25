@@ -1,14 +1,40 @@
 {
   "name": "node-server",
+  "description": "node server frameworks.",
   "version": "0.1.0",
   "homepage": "https://github.com/toolkit-rack/node-server",
   "authors": [
     "周培公 <peigong@foxmail.com>"
   ],
-  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/toolkit-rack/node-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/toolkit-rack/node-server/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/toolkit-rack/node-server/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt nodeunit"
+  },
   "devDependencies": {
+    "nopt": "~2.1.2",
+    "express": "~3.4.8",
+    "lodash": "~1.2.1",
     "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.6.4",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt-contrib-watch": "~0.5.3",
     "grunt-contrib-clean": "~0.4.0",
     "grunt-contrib-copy": "~0.4.0"
-  }
+  },
+  "keywords": []
 }
