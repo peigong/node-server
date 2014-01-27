@@ -1,8 +1,7 @@
 {
   "name": "node-server",
   "description": "node server frameworks.",
-  "version": "0.0.1",
-  "private": true,
+  "version": "0.1.0",
   "dependencies": {
     "nopt": "~2.1.2",
     "express": "~3.4.8",
