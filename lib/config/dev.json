@@ -1,7 +1,7 @@
 {
     "app": {
         "http_port": "4444",
-        "vhost": "node-server"
+        "vhost": "node-server",
         "access_log": "./access_log.log",
         "error_log": "./error_log.log"
     }
