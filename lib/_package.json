@@ -1,10 +1,11 @@
 {
   "name": "node-server",
   "description": "node server frameworks.",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "dependencies": {
     "nopt": "~2.1.2",
     "express": "~3.4.8",
-    "lodash": "~1.2.1"
+    "lodash": "~1.2.1",
+    "log4js": "~0.6.9"
   }
 }
