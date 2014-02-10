@@ -12,6 +12,7 @@ module.exports = function (grunt) {
       server: {
         files: [ 
           { expand: true, cwd: "lib", src: ['**'], dest: 'server' },
+          { expand: true, cwd: "lib/config", src: ['package.json'], dest: 'server' },
           { expand: true, cwd: "tests", src: ['**'], dest: 'server' }
         ]
       }

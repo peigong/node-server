@@ -11,6 +11,8 @@ tests/	:	配套测试的模块和钩子目录。
 
 ## 系统配置文件 ##
 
+需要把lib/config/package.json拷贝到项目根目录，从执行npm install
+
 ## 模块的开发 ##
 
 ## TODO ##
