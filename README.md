@@ -12,7 +12,7 @@
 ## 框架的目录结构 ##
 
 1. bin/		：系统内置命令的目录
-2. config/	：系统配置目录
+2. config/	：系统样例配置的目录
 3. hooks/	：存储模块自定义钩子的目录
 4. lib/		：框架的类库
 5. logs/	：系统日志的默认目录
@@ -34,18 +34,24 @@ TODO：扫瞄和安装模块。
 
 在命令行下启动服务。
 
-执行方法：`node bin/run-server.js -m stub|dev|pro -c dev.json`
+执行方法：`node bin/run-server.js -m stub|dev|pro -c ../config/`
 
 参数：
 
 	-m, --mode	：服务启动的模式。支持桩（stub）、开发（dev）和产品（pro）三种启动模式。
-	-c, --config：启动服务使用的配置文件，以config/配置目录为基准。桩模式启动服务默认使用stub.json，开发模式默认使用dev.json，产品模式默认pro.json
+	-c, --config：启动服务使用的配置文件目录。可以是以根目录为基准的相对目录，也可以是绝对路径。默认为../config/。
 
-## 系统配置文件 ##
+**配置文件以配置目录为基准，如下：**
+
+1. 桩模式	：stub.json
+2. 开发模式	：dev.json
+3. 产品模式	：pro.json
+
+## 系统的配置文件样例 ##
 
 ### NPM包依赖配置 ###
 
-`config/package.json` 服务框架必备的NPM包依赖配置。
+`config/package.json`：服务框架必备的NPM包依赖配置。
 
 ### Node-Server框架服务配置 ###
 
@@ -54,12 +60,16 @@ TODO：扫瞄和安装模块。
 	{
 	    "app": {
 	        "http_port": "4444",
-	        "vhost": "node-server"
+	        "vhost": "node-server",
+	        "static_routes": [
+	            { "path": "/config", "dir": "../config" }
+	        ]
 	    }
 	}
 1. app		：服务应用的配置节点。
 2. http_port：HTTP协议下使用的端口号。
 3. vhost	：虚拟HOST的配置。允许的值为字符串，或字符串的数组。如，`"vhost": "node-server"`，或`"vhost": ["node-server-1", "node-server-2"]`。
+4. static_routes：用于配置静态文件的路由。允许值的类型为对象的数组。对象的属性`path`配置URL的绝对路径，`dir`配置静态文件的目录，可以是物理路径，也可以是相对于WEB应用根目录的相对目录。
 
 ## 钩子开发接口 ##
 

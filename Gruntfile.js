@@ -6,14 +6,16 @@ module.exports = function (grunt) {
 
     pkg: grunt.file.readJSON('package.json'),
     clean: {
-      server: ['server']
+      dist: ['dist']
     },
     copy: {
-      server: {
+      dist: {
         files: [ 
-          { expand: true, cwd: "lib", src: ['**'], dest: 'server' },
-          { expand: true, cwd: "lib/config", src: ['package.json'], dest: 'server' },
-          { expand: true, cwd: "tests", src: ['**'], dest: 'server' }
+          { expand: true, cwd: "lib", src: ['**'], dest: 'dist/server' },
+          { expand: true, cwd: "tests", src: ['**'], dest: 'dist/server' },
+          { expand: true, cwd: "lib/config", src: ['package.json'], dest: 'dist/server' },
+          { expand: true, cwd: "lib/config", src: ['dev.json'], dest: 'dist/config' },
+          { expand: true, cwd: "lib/config", src: ['log4js.json'], dest: 'dist/config' }
         ]
       }
     }
