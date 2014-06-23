@@ -1,5 +1,11 @@
 # Node-Server框架 #
 
+## TODO ##
+
+1. 单元测试和持续集成(travis-ci)
+2. 控制服务启动、停止和重启的脚本（windows版本和linux版本）
+3. Form Body及Cookie等默认为启用，可以通过配置禁用。
+
 ## 框架和模块的安装 ##
 
 1. 将库目录（lib/）下的所有内容拷贝到项目根目录。
@@ -166,8 +172,3 @@ TODO：扫瞄和安装模块。
 进入模块开发的空目录，按照提示执行：
 
 	yo server-module
-
-## TODO ##
-
-1. 单元测试和持续集成(travis-ci)
-2. 控制服务启动、停止和重启的脚本（windows版本和linux版本）
