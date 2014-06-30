@@ -1,11 +1,11 @@
 #!/bin/sh
 
-DIR = `pwd`
-NODE = `which node`
-PIDFILE = `../server.pid`
+DIR=`pwd`
+NODE=`which node`
+PIDFILE=`../server.pid`
 
 #get action
-ACTION = $1
+ACTION=$1
 
 #help
 usage(){
@@ -21,7 +21,7 @@ get_pid(){
 
 #start server
 start(){
-    pid = `get_pid`
+    pid=`get_pid`
 
     if [ ! -z $pid ]; then
         echo 'server is already running'
@@ -33,7 +33,7 @@ start(){
 
 #stop server
 stop(){
-    pid = `get_pid`
+    pid=`get_pid`
 
     if [ ! -z $pid ]; then
         echo 'server not running'
