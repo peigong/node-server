@@ -70,16 +70,18 @@ TODO：扫瞄和安装模块。
 	        "static_routes": [
 	            { "path": "/config", "dir": "../config" }
 	        ],
+            "allowJSON": true,
             "allowCookieParser": true,
-            "allowBodyParser": true
+            "allowMultipart": true
 	    }
 	}
 1. **app：**服务应用的配置节点。
 2. **http_port：**HTTP协议下使用的端口号，默认为1314。
 3. **vhost：**虚拟HOST的配置。允许的值为字符串，或字符串的数组。如，`"vhost": "node-server"`，或`"vhost": ["node-server-1", "node-server-2"]`。
 4. **static_routes：**用于配置静态文件的路由。允许值的类型为对象的数组。对象的属性`path`配置URL的绝对路径，`dir`配置静态文件的目录，可以是物理路径，也可以是相对于WEB应用根目录的相对目录。
-5. **allowCookieParser：**是否允许启用CookieParser中间件，解析Cookie参数。默认为启用（true）。
-6. **allowBodyPaserr：**是否允许启用BodyParser中间件，解析Form表单传递的请求体数据。默认为启用。
+5. **allowJSON：**是否允许启用express.json()中间件，解析JSON的请求体。默认为启用（true）。
+5. **allowCookieParser：**是否允许启用express.cookieParser()中间件，解析Cookie参数。默认为启用（true）。
+6. **allowMultipart：**是否允许启用express.multipart()中间件，解析multipart/form-data的请求体数据。默认为启用。
 
 ## 钩子开发接口 ##
 
