@@ -40,12 +40,12 @@ TODO：扫瞄和安装模块。
 
 在命令行下启动服务。
 
-执行方法：`node bin/run-server.js -m stub|dev|pro -c ../config/`
+执行方法：`node bin/run-server.js -m dev|stub|pro -c ../config/`
 
 参数：
 
 	-m, --mode	：服务启动的模式。支持桩（stub）、开发（dev）和产品（pro）三种启动模式。
-	-c, --config：启动服务使用的配置文件目录。可以是以根目录为基准的相对目录，也可以是绝对路径。默认为../config/。
+	-c, --configDir：启动服务使用的配置文件目录。可以是以根目录为基准的相对目录，也可以是绝对路径。默认为../config/。
 
 **配置文件以配置目录为基准，如下：**
 
@@ -65,17 +65,21 @@ TODO：扫瞄和安装模块。
 
 	{
 	    "app": {
-	        "http_port": "4444",
+	        "http_port": "1314",
 	        "vhost": "node-server",
 	        "static_routes": [
 	            { "path": "/config", "dir": "../config" }
-	        ]
+	        ],
+            "allowCookieParser": true,
+            "allowBodyParser": true
 	    }
 	}
-1. app		：服务应用的配置节点。
-2. http_port：HTTP协议下使用的端口号。
-3. vhost	：虚拟HOST的配置。允许的值为字符串，或字符串的数组。如，`"vhost": "node-server"`，或`"vhost": ["node-server-1", "node-server-2"]`。
-4. static_routes：用于配置静态文件的路由。允许值的类型为对象的数组。对象的属性`path`配置URL的绝对路径，`dir`配置静态文件的目录，可以是物理路径，也可以是相对于WEB应用根目录的相对目录。
+1. **app：**服务应用的配置节点。
+2. **http_port：**HTTP协议下使用的端口号，默认为1314。
+3. **vhost：**虚拟HOST的配置。允许的值为字符串，或字符串的数组。如，`"vhost": "node-server"`，或`"vhost": ["node-server-1", "node-server-2"]`。
+4. **static_routes：**用于配置静态文件的路由。允许值的类型为对象的数组。对象的属性`path`配置URL的绝对路径，`dir`配置静态文件的目录，可以是物理路径，也可以是相对于WEB应用根目录的相对目录。
+5. **allowCookieParser：**是否允许启用CookieParser中间件，解析Cookie参数。默认为启用（true）。
+6. **allowBodyPaserr：**是否允许启用BodyParser中间件，解析Form表单传递的请求体数据。默认为启用。
 
 ## 钩子开发接口 ##
 

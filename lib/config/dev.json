@@ -1,6 +1,6 @@
 {
     "app": {
-        "http_port": "4444",
+        "http_port": "1314",
         "vhost": "node-server",
         "static_routes": [
             { "path": "/config", "dir": "../config" }
