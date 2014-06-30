@@ -1,8 +1,7 @@
 #!/bin/sh
 
 DIR=`pwd`
-NODE=`nohup node`
-PIDFILE=`../server.pid`
+PIDFILE="../server.pid"
 
 #get action
 ACTION=$1
@@ -26,7 +25,7 @@ start(){
     if [ ! -z $pid ]; then
         echo 'server is already running'
     else
-        $NODE $DIR/run-server.js -m dev > /dev/null &
+        nohup node $DIR/run-server.js -m dev > /dev/null &
         echo $! > $PIDFILE
         echo 'server is running'
     fi
