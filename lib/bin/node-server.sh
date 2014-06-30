@@ -23,16 +23,24 @@ start(){
     if [ ! -z $pid ]; then
         echo 'server is already running'
     else
-        echo 'server is running ...'
+        msg_running = 'server is running ...'
+        echo $msg_running
         #cd ../server
-        cd ../  > /dev/null 
-        npm install  > /dev/null 
-        node ./bin/create-package.js  > /dev/null 
-        npm install > /dev/null 
-        npm update > /dev/null 
+        cd ../
+        echo $msg_running
+        npm install
+        echo $msg_running
+        node ./bin/create-package.js
+        echo $msg_running
+        npm install
+        echo $msg_running
+        npm update
+        echo $msg_running
         #cd ../bin
         cd ./bin > /dev/null 
+        echo $msg_running
         nohup node ./run-server.js -m dev > /dev/null &
+        echo $msg_running
         echo $! > $PIDFILE
         echo 'server is run!'
     fi
