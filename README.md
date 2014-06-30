@@ -2,9 +2,7 @@
 
 ## TODO ##
 
-1. 单元测试和持续集成(travis-ci)
-2. 控制服务启动、停止和重启的脚本（windows版本和linux版本）
-3. Form Body及Cookie等默认为启用，可以通过配置禁用。
+- 单元测试和持续集成(travis-ci)
 
 ## 框架和模块的安装 ##
 
