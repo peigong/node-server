@@ -1,10 +1,8 @@
 #!/bin/sh
 
-HOME=$(cd "$(dirname "$0")"; pwd)
-PIDFILE="../server.pid"
-
-#get action
+#HOME=$(cd "$(dirname "$0")"; pwd)
 ACTION=$1
+PIDFILE="../server.pid"
 
 #help
 usage(){
@@ -25,16 +23,25 @@ start(){
     if [ ! -z $pid ]; then
         echo 'server is already running'
     else
-        nohup node $HOME/run-server.js -m dev > /dev/null &
+        echo 'server is running ...'
+        #cd ../server
+        cd ../  > /dev/null 
+        npm install  > /dev/null 
+        node ./bin/create-package.js  > /dev/null 
+        npm install > /dev/null 
+        npm update > /dev/null 
+        #cd ../bin
+        cd ./bin > /dev/null 
+        nohup node ./run-server.js -m dev > /dev/null &
         echo $! > $PIDFILE
-        echo 'server is running'
+        echo 'server is run!'
     fi
 }
 
 #stop server
 stop(){
     pid=`get_pid`
-    if [ ! -z $pid ]; then
+    if [ -z $pid ]; then
         echo 'server not running'
     else
         echo 'server is stopping ...'
