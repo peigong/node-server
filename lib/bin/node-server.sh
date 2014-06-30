@@ -42,6 +42,7 @@ start(){
         nohup node ./run-server.js -m dev > /dev/null &
         echo $msg_running
         echo $! > $PIDFILE
+        echo $pid
         echo 'server is run!'
     fi
 }
@@ -53,6 +54,7 @@ stop(){
         echo 'server not running'
     else
         echo 'server is stopping ...'
+        echo $pid
         kill -15 $pid
         rm $PIDFILE
         echo 'server stopped!'
