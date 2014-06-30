@@ -34,7 +34,6 @@ start(){
 #stop server
 stop(){
     pid=`get_pid`
-    echo $pid
     if [ ! -z $pid ]; then
         echo 'server not running'
     else
