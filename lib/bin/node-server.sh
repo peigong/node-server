@@ -1,6 +1,5 @@
 #!/bin/sh
 
-DIR=`pwd`
 PIDFILE="../server.pid"
 
 #get action
@@ -25,7 +24,7 @@ start(){
     if [ ! -z $pid ]; then
         echo 'server is already running'
     else
-        nohup node $DIR/run-server.js -m dev > /dev/null &
+        nohup node ./run-server.js -m dev > /dev/null &
         echo $! > $PIDFILE
         echo 'server is running'
     fi
@@ -56,11 +55,11 @@ case "$ACTION" in
     start )
         start
         ;;
-    start )
-        start
+    stop )
+        stop
         ;;
-    start )
-        start
+    restart )
+        restart
         ;;
     *)
         usage
