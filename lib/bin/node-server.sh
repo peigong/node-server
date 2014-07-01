@@ -31,10 +31,8 @@ start(){
         npm update
         #cd ../bin
         cd ./bin 
-        echo $msg_running
         nohup node ./run-server.js -m dev > /dev/null &
         echo 'server is running ...'
-        echo "shell pid:$!\n" > ../pid.log #$PIDFILE
         echo $! > $PIDFILE
         echo 'server is run!'
     fi
