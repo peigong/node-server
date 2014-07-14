@@ -5,6 +5,9 @@
 - 单元测试和持续集成(travis-ci)
 - 检查log4js不能记录运行时异常的原因
 - 将日志格式设计成与Ngix默认日志一模一样，同时可以通过配置文件配置
+- connect.multipart()、connect.limit()将在connect 3.0去除，需要处理
+
+参考：https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
 
 ## 框架和模块的安装 ##
 
