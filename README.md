@@ -43,7 +43,7 @@ TODO：扫瞄和安装模块。
 
 在命令行下启动服务。
 
-执行方法：`node bin/run-server.js -m dev|stub|pro -c ../config/`
+执行方法：`node bin/run-server.js -m dev|stub|pro -c ../config`
 
 参数：
 
