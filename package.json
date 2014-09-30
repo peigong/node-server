@@ -1,7 +1,7 @@
 {
   "name": "node-server",
   "description": "node server frameworks.",
-  "version": "0.1.8",
+  "version": "0.1.11",
   "homepage": "https://github.com/toolkit-rack/node-server",
   "authors": [
     "周培公 <peigong@foxmail.com>"
