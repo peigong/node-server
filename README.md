@@ -3,9 +3,7 @@
 ## TODO ##
 
 - 单元测试和持续集成(travis-ci)
-- 检查log4js不能记录运行时异常的原因
 - 将日志格式设计成与Ngix默认日志一模一样，同时可以通过配置文件配置
-- connect.multipart()、connect.limit()将在connect 3.0去除，需要处理
 - 需要能够配置log4js的日志文件地址。
 - 需要根据参数，测试启动web服务，并可以关闭测试。
 
