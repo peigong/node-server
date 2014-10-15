@@ -7,8 +7,6 @@
 - 需要能够配置log4js的日志文件地址。
 - 需要根据参数，测试启动web服务，并可以关闭测试。
 
-参考：https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
-
 ## 框架和模块的安装 ##
 
 1. 将库目录（lib/）下的所有内容拷贝到项目根目录。
